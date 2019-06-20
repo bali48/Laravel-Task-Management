@@ -1,0 +1,21 @@
+<?php
+
+function ok($data = null){
+    if(!$data){
+        return response()->json([
+            'status' => 'success',
+        ]);
+    }
+
+    return response()->json([
+        'status' => 'success',
+        'data'	 => $data
+    ]);
+}
+
+function error($message){
+    return response()->json([
+        'status' => 'error',
+        'message'	 => $message
+    ]);
+}
